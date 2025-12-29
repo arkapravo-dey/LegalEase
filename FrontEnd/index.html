@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Legal Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Header -->
+        <header>
+            <div class="header-content">
+                    <h1>Virtual Legal Assistant</h1>
+                    <button id="theme-toggle" class="theme-toggle" type="button" aria-pressed="false" aria-label="Toggle light and dark theme">
+                        <span class="switch" aria-hidden="true"><span class="knob"></span></span>
+                    </button>
+                </div>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Mode Selection -->
+            <div class="mode-buttons">
+                <button class="mode-button active" data-mode="qa">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                    </svg>
+                    Q/A
+                </button>
+                <button class="mode-button" data-mode="search">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"/>
+                        <path d="m21 21-4.3-4.3"/>
+                    </svg>
+                    Search Cases
+                </button>
+                <button class="mode-button" data-mode="document">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
+                        <polyline points="14 2 14 8 20 8"/>
+                    </svg>
+                    Document Answering
+                </button>
+            </div>
+
+            <!-- Input Area -->
+            <div class="input-area">
+                <!-- Q/A & Search Cases Form -->
+                <div class="qa-search-input active">
+                    <form id="qa-form">
+                        <div class="input-wrapper">
+                            <input type="text" placeholder="Ask your legal question..." id="qa-input">
+                            <button type="submit">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="m22 2-7 20-4-9-9-4Z"/>
+                                    <path d="M22 2 11 13"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Document Upload & Question Form -->
+                <div class="document-upload">
+                    <form id="document-form">
+                        <div class="upload-area" id="drop-zone">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
+                                <polyline points="14 2 14 8 20 8"/>
+                            </svg>
+                            <p class="upload-text">Drag and drop your legal document here</p>
+                            <p class="upload-subtext">or</p>
+                            <button type="button" class="browse-button">Browse Files</button>
+                            <p class="file-name"></p>
+                        </div>
+                        <div class="input-wrapper">
+                            <input type="text" placeholder="Ask a question about the document..." id="document-input">
+                            <button type="submit">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="m22 2-7 20-4-9-9-4Z"/>
+                                    <path d="M22 2 11 13"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Results Area -->
+            <div class="results-area">
+                <p class="results-placeholder">Your answers will appear here</p>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
