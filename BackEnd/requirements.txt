@@ -1,0 +1,9 @@
+Flask
+flask-cors
+langdetect
+deep-translator
+transformers
+sentence-transformers
+scikit-learn
+numpy
+jsonschema
