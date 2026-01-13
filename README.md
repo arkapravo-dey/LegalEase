@@ -66,8 +66,8 @@ Vashisht-Hackathon/
 ### **1️⃣ Clone the Repository**
 
 ```bash
-git clone https://github.com/APillai03/Vashisht-Hackathon
-cd Vashisht-Hackathon
+git clone https://github.com/arkapravo-dey/LegalEase
+cd LegalEase
 ```
 ### **2️⃣ Extract Database.zip**
 ```bash
